@@ -1,0 +1,45 @@
+{
+  "ProjectName": "MMP App",
+  "ProjectGuid": "b7fcfa96-a79f-4f22-97ed-8ae409b57f76",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.MMPApp",
+  "DisplayName": "MMP App",
+  "Author": "",
+  "Description": "MMP App",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.7.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{1af21fe2-ceb5-4c4f-a816-8ba2616b9110}",
+  "WP8ProductID": "{3fb20779-6cea-4b26-aedb-1ac69321cbeb}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.MMPApp",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
