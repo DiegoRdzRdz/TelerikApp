@@ -1,13 +1,14 @@
-body {
-	background: #2528D2;
+body{
+	background: #5BCFF2;
 	color: #000;
 	font: 14px Arial;
 	margin: 0 auto;
 	padding: 0;
 	position: relative;
 }
-h1{ font-size:16px;
- color:#FFFFFF;}
+.apps{
+    text-align:left;
+}
 .app {
     position:absolute;             
     left:50%;

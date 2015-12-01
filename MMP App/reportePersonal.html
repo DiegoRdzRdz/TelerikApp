@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/jquery-ui.js"></script>
+    <script src="kendo/js/funciones.js"></script>
+    <script src="js/reportePersonal.js"></script>
+    <link rel="stylesheet" type="text/css" href="kendo/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/horariosFlexibles.css">
+</head>
+
+<body>
+    Reporte personal.
+    <p id="nombre"></p>
+    <p id="totalHoras">Total de horas: </p>
+    <p>Fecha Inicial: <input type="text" id="fhIni"></p>
+    <p>Fecha Final: <input type="text" id="fhFin"></p>
+    <table id="reporte" border="1">
+        <tr>
+            <td>Fecha</td>
+            <td>Horas</td>
+            <td>Detalle</td>
+        </tr>
+    </table>
+    <div id="dlgDetalleDia" title="Detalle">
+        <table id="reporteDia" border="1">
+        </table>
+    </div>
+</body>
+
+</html>
