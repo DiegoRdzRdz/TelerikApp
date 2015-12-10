@@ -1,9 +1,9 @@
-var fullName = decodeURIComponent($.urlParam('fullName'));
 var personId = decodeURIComponent($.urlParam('personId'));
+var fullName = decodeURIComponent($.urlParam('fullName'));
 $(function () {
     $("#nombre").append(fullName);
 });
 
 function horariosFlexibles() {
-    location = "reportePersonal.html?personId=" + personId + "&fullName=" + fullName;
+    window.location = "reportePersonal.html?personId=" + personId + "&fullName=" + fullName;
 };

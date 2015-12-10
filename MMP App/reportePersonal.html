@@ -14,15 +14,14 @@
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/horariosFlexibles.css">
 </head>
-
-<body>
-    <div data-role="view">
+<body class="pages">
+    <div class="app" id="reportePersonal">
     Reporte personal.
     <p id="nombre"></p>
-    <form>
+    <div>
         <input type='button' value='Eventos' onclick='reporteEventos()' />
         <input type='button' value='Horas de Recuperacion por viaje' onclick='reporteHorasViaje()' />
-    </form>
+    </div>
     <form>
         <p>Fecha Inicial:
             <input id="fechaInicial" /> </p>
