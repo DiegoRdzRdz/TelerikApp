@@ -2,31 +2,64 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, 
-                                   width=device-width, height=device-height" />
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="js/index.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Metalsa Mobile Portal</title>
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/mein.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 
 <body>
-    <div class="app" data-role="view" id="index">
-        <img src="img/logoMetalsa.png" />
-        <form>
-            <h1>METALSA MOBILE PORTAL</h1>
-            <div>
-                <input type="text" placeholder="Email" id="email" />
+    <div class="container">
+        <div id="login-top" class="row">
+            <div class="col-xs-8 col-xs-offset-2 vcenter">
+                <img src="img/logoMetalsa-blue.png" class="img-responsive center-block">
             </div>
-            <div>
-                <input type="password" placeholder="Password" id="pwd" />
+            <!-- logo -->
+        </div>
+        <!-- row -->
+        <div id="login-contenido" class="row">
+            <div id="login-holder" class="col-xs-8 col-xs-offset-2">
+                <div class="row">
+                    <img src="img/login.png" class="img-responsive">
+                </div>
+                <!-- imagen -->
+                <div id="login" class="row">
+                    <form>
+                        <div>
+                            <input type="text" class="form-control" placeholder="Email" id="email" />
+                        </div>
+                        <div>
+                            <input type="password" class="form-control" placeholder="Password" id="pwd" />
+                        </div>
+                        <div>
+                            <input type="button" class="btn btn-default form-control mBlue login-btn" value="Log in" onclick="login(this.form)" />
+                        </div>
+                    </form>
+                </div>
+                <!-- login -->
             </div>
-            <div>
-                <input type="button" value="Log in" onclick="login(this.form)" />
-            </div>
-        </form>
+            <!-- col xs 8 LOGIN -->
+        </div>
+        <!-- row -->
     </div>
+    <!-- container -->
+    <div id="footer" class="mBlue_bg"></div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jQuery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="kendo/js/funciones.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>

@@ -1,21 +1,21 @@
 .pages{
-	background: #5BCFF2;
-	color: #000;
-	font: 14px Arial;
-	margin: 0 auto;
-	padding: 0;
-	position: relative;
+	background: #5BCFF2 !important;
+	color: #000 !important;
+	font: 14px Arial !important;
+	margin: 0 auto !important;
+	padding: 0 !important;
+	position: relative !important;
 }
 .apps{
     text-align:left;
 }
 .app {
-    position:absolute;             
-    left:50%;
-    top:50%;
-    height:50px;                   
-    width:225px;                   
-    text-align:center;
-    padding:180px 0px 0px 0px;     
-    margin:-115px 0px 0px -112px; 
+    position:absolute !important;             
+    left:50% !important;
+    top:50% !important;
+    height:50px !important;                   
+    width:225px !important;                   
+    text-align:center !important;
+    padding:180px 0px 0px 0px !important;     
+    margin:-115px 0px 0px -112px !important; 
 }

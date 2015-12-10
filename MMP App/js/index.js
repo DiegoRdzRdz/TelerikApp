@@ -29,7 +29,6 @@ var app = {
     }
 
 };
-
 function login(form) {
     var email = form.email.value;
     var pwd = form.pwd.value;

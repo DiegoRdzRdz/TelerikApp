@@ -1,5 +1,6 @@
 var personId = decodeURIComponent($.urlParam('personId'));
 var fullName = decodeURIComponent($.urlParam('fullName'));
+var app = new kendo.mobile.Application();
 $(function () {
     var fecha = new Date();
     $("#fechaInicial").kendoDatePicker({

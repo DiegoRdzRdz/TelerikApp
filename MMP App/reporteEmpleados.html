@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2014.1.318/js/kendo.all.min.js"></script>
+    <script src="kendo/js/funciones.js"></script>
+    <script src="js/reporteEmpleados.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="kendo/css/kendo.common.min.css">
+    <link rel="stylesheet" type="text/css" href="kendo/css/kendo.default.min.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/horariosFlexibles.css">
+</head>
+<body class="pages">
+    <div class="app" id="reporteEmpleados">
+    Reporte personal.
+    <p id="nombre"></p>
+    <form>
+        <p>Fecha Inicial:
+            <input id="fechaInicial" /> </p>
+        <p>Fecha Final:
+            <input id="fechaFinal" /> </p>
+        <p id="totalHoras">
+            <input type='button' value='Ver detalle' onclick='actualizaReporte(this.form)' /> Total de horas: </p>
+    </form>
+    <table id="reporte" border="1">
+        <tr>
+            <td>No. Empleado</td>
+            <td>Nombre</td>
+            <td>Horas</td>
+            <td>Detalle</td>
+        </tr>
+    </table>
+    <div id="dlgDetalleDia" title="Detalle">
+        <table id="reporteDia" border="1">
+        </table>
+    </div>
+    </div>
+</body>
+
+</html>

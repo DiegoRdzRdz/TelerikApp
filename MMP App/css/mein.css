@@ -1,0 +1,74 @@
+.rot { background: red; } .grun { background: green; }
+
+.mBlue_bg { background: #02A8F3; } .mBlue { color: #02A8F3; }
+
+.h100 { height: 100%; }.vcenter { position: relative; top: 50%; transform: translateY(-50%); }
+
+.noPadding { padding:0; } .noMaringLR { margin-left: 0; margin-right: 0; }
+
+.form-control { border-radius: 0;  border: none; }
+
+/* --------------------------- */
+/* LOGIN */
+/* --------------------------- */
+
+#login-top { height: 38.20vh; }
+#login-contenido { height: 61.80vh; }
+
+#login-holder input { height: 5rem }
+
+#login-holder { box-shadow: 2px 2px 4px rgba(0,0,0,.25); }
+
+	.login-btn { border-bottom: 2px solid #02A8F3; }
+
+#footer { position: absolute; bottom: 0px; width: 100%; height: 5px; }
+
+
+/* --------------------------- */
+/* AREAS */
+/* --------------------------- */
+
+#top-bar { height: 50px; }
+
+	#logout , #user-name { height: 100%; }
+
+	#user-img-b { border-radius: 100px; display: inline-block; overflow: hidden; box-shadow: 2px 3px 4px rgba(0,0,0,.25); }
+
+	#top-bar.home-line { border-bottom: 1px solid #E5E5E5; }
+
+#second-area { height: 250px; }
+
+#mid-bar { height: 40px; }
+
+#contenido-area { }
+
+	.app-btn { height: 130px; border-top: 1px solid #E5E5E5; border-bottom: 1px solid #E5E5E5; }
+
+		.app-icon { height: 100%; }
+
+			.app-icon img { width: 80%; }
+
+		.info-area { height: 100%; }
+
+			.app-quick-info { height: 65%; margin-top: 13%; }
+
+				.HR-hrs-trabajadas-blue > h1 { display: inline-block; margin: 0; padding: 0; font-weight: normal; font-size: 2.25rem; }
+				.HR-hrs-trabajadas-grey { display: inline-block; color: #AFBDC4; line-height: 20px; font-size: 1.25rem; }
+
+			.qi-vertical-line { width: 1px; height: 80%; background: #8FA3AD; }
+
+			.app-notifications { height: 100%; }
+
+				.ntf-bubble { position: absolute; height: 22px; width: 22px; left: 50%; top: 35%; background: #EB4D5C; border: 2px solid #FFF; border-radius: 100px; z-index: 1; }
+					.ntf-bubble > p { color: #FFF; text-align: center; margin: 2px 0 0 1px; padding: 0; font-size: 1.05rem; }
+
+		.app-name { position: absolute; height: 25%; bottom: 5px; color: #AFBDC4; font-size: 1.5rem; text-transform: uppercase; }
+
+
+
+
+
+
+
+
+

@@ -12,7 +12,7 @@ function crearHoras() {
 function generaReporte(personId) {
     var eventos;
     var srtHtml;
-    var urlServ = "http://cloud.metalsa.com/BusServiceMetalsa-war/service/person/" + personId + "/horasViajeHF";
+    var urlServ = "http://cloud.metalsa.com/BusServiceMetalsa-war/service/person/" + 12653 + "/horasViajeHF";
     $.getJSON(urlServ,
         function (data) {
             $.each(data, function (key, val) {
