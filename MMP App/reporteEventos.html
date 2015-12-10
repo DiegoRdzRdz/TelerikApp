@@ -7,41 +7,31 @@
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="https://kendo.cdn.telerik.com/2014.1.318/js/kendo.all.min.js"></script>
     <script src="kendo/js/funciones.js"></script>
-    <script src="js/reportePersonal.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="js/reporteEventos.js"></script>
     <link rel="stylesheet" type="text/css" href="kendo/css/kendo.common.min.css">
     <link rel="stylesheet" type="text/css" href="kendo/css/kendo.default.min.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/horariosFlexibles.css">
 </head>
 
-<body>
-    <div data-role="view">
-    Reporte personal.
+<body class="pages">
+    <div class="app" data-role="view">
+    Reporte de eventos.
     <p id="nombre"></p>
     <form>
-        <input type='button' value='Eventos' onclick='reporteEventos()' />
-        <input type='button' value='Horas de Recuperacion por viaje' onclick='reporteHorasViaje()' />
+        <input type='button' value='Crear Evento' onclick='crearEvento()' />
     </form>
     <form>
-        <p>Fecha Inicial:
-            <input id="fechaInicial" /> </p>
-        <p>Fecha Final:
-            <input id="fechaFinal" /> </p>
-        <p id="totalHoras">
-            <input type='button' value='Ver detalle' onclick='actualizaReporte(this.form)' /> Total de horas: </p>
+        
     </form>
     <table id="reporte" border="1">
         <tr>
             <td>Fecha</td>
+            <td>Evento</td>
             <td>Horas</td>
-            <td>Detalle</td>
+            <td>Comentario</td>
         </tr>
     </table>
-    <div id="dlgDetalleDia" title="Detalle">
-        <table id="reporteDia" border="1">
-        </table>
-    </div>
     </div>
 </body>
 

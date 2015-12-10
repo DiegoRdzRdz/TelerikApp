@@ -1,5 +1,5 @@
 /*
-* Kendo UI Complete v2013.1.319 (http://kendoui.com)
+* Kendo UI Complete v2013.1.514 (http://kendoui.com)
 * Copyright 2013 Telerik AD. All rights reserved.
 *
 * Kendo UI commercial licenses may be obtained at
@@ -121,7 +121,8 @@ input.k-textbox,
 textarea.k-textbox,
 input.k-textbox:hover,
 textarea.k-textbox:hover,
-.k-textbox>input {
+.k-textbox>input,
+.k-multiselect-wrap {
     background-color: #fff;
     color: #2e2e2e
 }
@@ -152,6 +153,7 @@ textarea.k-textbox:hover,
 .k-toolbar,
 .k-dropdown-wrap,
 .k-picker-wrap,
+.k-numeric-wrap,
 .k-grouping-header,
 .k-pager-wrap,
 .k-textbox,
@@ -165,7 +167,8 @@ textarea.k-textbox:hover,
     background-image: none, -moz-linear-gradient(top, #f6f6f6 0, #eaeaea 100%);
     background-image: none, -o-linear-gradient(top, #f6f6f6 0, #eaeaea 100%);
     background-image: none, linear-gradient(to bottom, #f6f6f6 0, #eaeaea 100%);
-    background-position: 50% 50%
+    background-position: 50% 50%;
+    background-color: #e3e3e3
 }
 .k-tabstrip-items .k-state-active {
     background: #fff
@@ -216,13 +219,7 @@ textarea.k-textbox:hover,
     background-color: #fff
 }
 .k-button {
-    color: #2e2e2e
-}
-.k-button,
-.k-button.k-state-disabled:hover,
-.k-state-disabled .k-button:hover,
-.k-button.k-state-disabled:active,
-.k-state-disabled .k-button:active {
+    color: #2e2e2e;
     border-color: #c5c5c5;
     background-color: #e3e3e3
 }
@@ -230,6 +227,18 @@ textarea.k-textbox:hover,
     color: #2e2e2e;
     border-color: #a99f9a;
     background-color: #a99f9a
+}
+.k-button.k-state-disabled:hover,
+.k-state-disabled .k-button:hover,
+.k-button.k-state-disabled:active,
+.k-state-disabled .k-button:active {
+    color: #9f9e9e;
+    border-color: #c5c5c5;
+    background-image: url('textures/highlight.png');
+    background-image: none, -webkit-linear-gradient(top, #f6f6f6 0, #eaeaea 100%);
+    background-image: none, -moz-linear-gradient(top, #f6f6f6 0, #eaeaea 100%);
+    background-image: none, -o-linear-gradient(top, #f6f6f6 0, #eaeaea 100%);
+    background-image: none, linear-gradient(to bottom, #f6f6f6 0, #eaeaea 100%)
 }
 .k-draghandle {
     border-color: #c5c5c5;
@@ -263,6 +272,7 @@ textarea.k-textbox:hover,
 }
 .k-state-selected,
 .k-state-selected:link,
+.k-state-selected:visited,
 .k-list>.k-state-selected,
 .k-list>.k-state-highlight,
 .k-panel>.k-state-selected,
@@ -283,6 +293,22 @@ td.k-state-focused,
 .k-button.k-state-focused {
     -webkit-box-shadow: inset 0 0 3px 1px #a99f9a;
     box-shadow: inset 0 0 3px 1px #a99f9a
+}
+.k-ie8 .k-panelbar span.k-state-focused,
+.k-ie8 .k-menu li.k-state-focused,
+.k-ie8 .k-listview>.k-state-focused,
+.k-ie8 .k-grid-header th.k-state-focused,
+.k-ie8 td.k-state-focused,
+.k-ie8 .k-button:focus,
+.k-ie8 .k-button.k-state-focused,
+.k-ie7 .k-panelbar span.k-state-focused,
+.k-ie7 .k-menu li.k-state-focused,
+.k-ie7 .k-listview>.k-state-focused,
+.k-ie7 .k-grid-header th.k-state-focused,
+.k-ie7 td.k-state-focused,
+.k-ie7 .k-button:focus,
+.k-ie7 .k-button.k-state-focused {
+    background-color: #a99f9a
 }
 .k-list>.k-state-selected.k-state-focused {
     -webkit-box-shadow: none;
@@ -401,7 +427,6 @@ div.k-imagebrowser-dropzone em {
 .k-state-disabled,
 .k-state-disabled .k-link,
 .k-state-disabled .k-button,
-.k-button.k-state-disabled:active,
 .k-other-month .k-link,
 .k-dropzone em,
 .k-tile-empty strong,
@@ -552,6 +577,8 @@ div.k-imagebrowser-dropzone em {
 .k-grouping-header .k-group-indicator,
 .k-autocomplete,
 .k-multiselect,
+.k-combobox,
+.k-dropdown,
 .k-dropdown-wrap,
 .k-datepicker,
 .k-timepicker,
@@ -593,14 +620,14 @@ div.k-imagebrowser-dropzone em {
 .k-picker-wrap.k-state-border-up .k-input,
 .k-picker-wrap.k-state-border-up .k-selected-color,
 .k-numeric-wrap.k-state-border-up .k-input {
-    -moz-border-radius: 0 0 0 2px;
-    -webkit-border-radius: 0 0 0 2px;
-    border-radius: 0 0 0 2px
+    -moz-border-radius: 0 0 0 4px;
+    -webkit-border-radius: 0 0 0 4px;
+    border-radius: 0 0 0 4px
 }
 .k-multiselect.k-state-border-up .k-multiselect-wrap {
-    -moz-border-radius: 0 0 2px 2px;
-    -webkit-border-radius: 0 0 2px 2px;
-    border-radius: 0 0 2px 2px
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px
 }
 .k-window-titlebar,
 .k-block>.k-header,
@@ -621,9 +648,9 @@ div.k-imagebrowser-dropzone em {
 .k-dropdown-wrap .k-input,
 .k-picker-wrap .k-input,
 .k-numeric-wrap .k-input {
-    -moz-border-radius: 2px 0 0 2px;
-    -webkit-border-radius: 2px 0 0 2px;
-    border-radius: 2px 0 0 2px
+    -moz-border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px
 }
 .k-numeric-wrap .k-link {
     -moz-border-radius: 0 2px 0 0;
@@ -650,14 +677,14 @@ div.k-imagebrowser-dropzone em {
 .k-picker-wrap.k-state-border-down .k-input,
 .k-picker-wrap.k-state-border-down .k-selected-color,
 .k-numeric-wrap.k-state-border-down .k-input {
-    -moz-border-radius: 2px 0 0 0;
-    -webkit-border-radius: 2px 0 0 0;
-    border-radius: 2px 0 0 0
+    -moz-border-radius: 4px 0 0 0;
+    -webkit-border-radius: 4px 0 0 0;
+    border-radius: 4px 0 0 0
 }
 .k-multiselect.k-state-border-down .k-multiselect-wrap {
-    -moz-border-radius: 2px 2px 0 0;
-    -webkit-border-radius: 2px 2px 0 0;
-    border-radius: 2px 2px 0 0
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0
 }
 .k-dropdown-wrap .k-select,
 .k-picker-wrap .k-select,
@@ -685,9 +712,9 @@ div.k-imagebrowser-dropzone em {
 .k-progress-status,
 .k-numeric-wrap.k-expand-padding .k-input,
 .k-multiselect-wrap {
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px
 }
 .k-list .k-state-hover,
 .k-list .k-state-focused,
@@ -721,7 +748,7 @@ only screen and (min-device-pixel-ratio: 2) {
     .k-tool-icon.k-state-hover,
     .k-tool-icon.k-state-active,
     .k-tool-icon.k-state-active.k-state-hover {
-        background-image: url('Default/sprite@2x.png');
+        background-image: url('Default/sprite_2x.png');
         background-size: 192px 336px
     }
 }

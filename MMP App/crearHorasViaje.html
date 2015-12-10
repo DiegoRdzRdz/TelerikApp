@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2015.3.1111/js/kendo.all.min.js"></script>
+    <script src="kendo/js/funciones.js"></script>
+    <script src="js/crearHorasViaje.js"></script>
+    <link rel="stylesheet" type="text/css" href="kendo/css/kendo.common.min.css">
+    <link rel="stylesheet" type="text/css" href="kendo/css/kendo.default.min.css">
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2015.3.1111/styles/kendo.mobile.all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
+
+
+<body class="pages">
+    <div class="app" data-role="view">
+    <form>
+        Crear evento
+        <br/>
+        <p>Fecha:
+            <input id="fechaInicial" /> </p>
+        <p>Mas de 6 horas:
+            <input type="checkbox" data-role="switch" data-enable="true" />
+        </p>
+        <p>Comentarios:
+            <textarea cols="25" rows="5" id="comentarios" name="comentarios"></textarea>
+        </p>
+        <input type='button' value='Crear' onclick='crearEvento(this.form)' />
+    </form>
+    </div>
+</body>
+
+</html>
