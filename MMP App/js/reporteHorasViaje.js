@@ -27,6 +27,6 @@ function generaReporte(personId) {
                 $("#reporte").append(srtHtml);
             });
             $("#reporte").append("</tbody>");
-            $("#reporte").kendoGrid();
         });
+    $("#reporte").kendoGrid();
 }

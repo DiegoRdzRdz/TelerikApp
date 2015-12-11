@@ -43,3 +43,9 @@ function reporteHorasViaje() {
 function reporteEmpleados() {
     location = "reporteEmpleados.html?personId=" + personId + "&fullName=" + fullName;
 }
+
+function nvl(value1, value2) {
+    if (value1 == null || value1 == "")
+        return value2;
+    return value1;
+}

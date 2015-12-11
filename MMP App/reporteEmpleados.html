@@ -16,6 +16,7 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="kendo/css/kendo.common.min.css">
     <link rel="stylesheet" type="text/css" href="kendo/css/kendo.default.min.css">
 </head>
@@ -93,6 +94,10 @@
                     </tr>
                 </thead>
             </table>
+            <div id="dlgDetalleEmpleado" title="Detalle">
+                <table id="reporteEmpleado" border="1">
+                </table>
+            </div>
             <div id="dlgDetalleDia" title="Detalle">
                 <table id="reporteDia" border="1">
                 </table>
@@ -106,6 +111,7 @@
     <script src="js/jQuery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="https://kendo.cdn.telerik.com/2014.1.318/js/kendo.all.min.js"></script>
     <script src="kendo/js/funciones.js"></script>
     <script src="js/reporteEmpleados.js"></script>

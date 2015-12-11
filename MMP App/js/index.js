@@ -45,7 +45,7 @@ function login(form) {
         alert('Email y password son requeridos');
         return;
     }
-   /* window.location = "home.html?personId=" + "-224" + "&fullName=" + "Sanchez Landa Victor Enrique" + "&horas=" + "00:00";*/
+    //window.location = "home.html?personId=" + "13572" + "&fullName=" + "Taméz García Jesús Alejandro" + "&horas=" + "00:00";
     
         $.ajax({
             url: "http://cloud.metalsa.com/BusServiceMetalsa-war/service/autenticar",

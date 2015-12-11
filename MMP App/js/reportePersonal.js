@@ -11,29 +11,15 @@ $(function () {
         format: "yyyy/MM/dd",
         value: fecha
     });
-    var lunes = formateaFecha(fecha);
+    var lunes = $.formateaFechaNumerico(fecha);
     fecha.setDate(fecha.getDate() + 6);
     $("#fechaFinal").kendoDatePicker({
         format: "yyyy/MM/dd",
         value: fecha
     });
-    var domingo = formateaFecha(fecha);
+    var domingo = $.formateaFechaNumerico(fecha);
     generaReporte(lunes, domingo);
 });
-
-function formateaFecha(d) {
-    var day = d.getDate();
-    var month = d.getMonth() + 1;
-    var year = d.getFullYear();
-    if (day < 10) {
-        day = "0" + day;
-    }
-    if (month < 10) {
-        month = "0" + month;
-    }
-    var date = year + "" + month + "" + day;
-    return date;
-}
 
 function actualizaReporte(form) {
     var fechaInicial = form.fechaInicial.value;
@@ -70,8 +56,8 @@ function generaReporte(fechaInicial, fechaFinal) {
                 $("#reporte").append(srtHtml);
             });
             $("#reporte").append("</tbody>");
-            $("#reporte").kendoGrid();
         });
+    $("#reporte").kendoGrid();
 }
 
 function verDetalle(fecha) {
