@@ -1,39 +1,21 @@
 var personId = decodeURIComponent($.urlParam('personId'));
 var fullName = decodeURIComponent($.urlParam('fullName'));
 $(function () {
-    var fecha = new Date();
-    var day = fecha.getDay() || 7;
-    if (day !== 1) {
-        fecha.setHours(-24 * (day - 1));
-    }
+    var fecha = $.getLunes();
     $("#nombre").append(fullName);
     $("#fechaInicial").kendoDatePicker({
         format: "yyyy/MM/dd",
         value: fecha
     });
-    var lunes = formateaFecha(fecha);
+    var lunes = $.formateaFechaNumerico(fecha);
     fecha.setDate(fecha.getDate() + 6);
     $("#fechaFinal").kendoDatePicker({
         format: "yyyy/MM/dd",
         value: fecha
     });
-    var domingo = formateaFecha(fecha);
+    var domingo = $.formateaFechaNumerico(fecha);
     generaReporte(lunes, domingo);
 });
-
-function formateaFecha(d) {
-    var day = d.getDate();
-    var month = d.getMonth() + 1;
-    var year = d.getFullYear();
-    if (day < 10) {
-        day = "0" + day;
-    }
-    if (month < 10) {
-        month = "0" + month;
-    }
-    var date = year + "" + month + "" + day;
-    return date;
-}
 
 function actualizaReporte(form) {
     var fechaInicial = form.fechaInicial.value;
@@ -74,13 +56,16 @@ function generaReporte(fechaInicial, fechaFinal) {
                 }
             });
             $("#totalHoras").append("<label id='totalHorasLbl'>" + totalHoras + "</label>");
+            $("#reporte").append("<tbody class='repDia'>");
             $.each(empleados, function (i, item) {
-                srtHtml = "<tr class='repDia'><td>" + item.employeeId + "</td><td>" + item.fullName + "</td>" +
+                srtHtml = "<tr><td>" + item.employeeId + "</td><td>" + item.fullName + "</td>" +
                     "<td>" + item.horas + "</td>" +
                     "<td><input type='button' value='Ver detalle' onclick='verDetalle(" + 
                     fechaInicial + "," + fechaFinal + "," + item.personId +")'/></td></tr>";
                 $("#reporte").append(srtHtml);
             });
+            $("#reporte").append("</tbody>");
+            $("#reporte").kendoGrid();
         });
 }
 

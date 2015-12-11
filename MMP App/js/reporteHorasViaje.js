@@ -20,10 +20,13 @@ function generaReporte(personId) {
                     eventos = val;
                 }
             });
+            $("#reporte").append("<tbody>");
             $.each(eventos, function (i, item) {
-                srtHtml = "<tr class='repDia'><td>" + item.fecha + "</td><td>" + item.horas + "</td>" +
+                srtHtml = "<tr><td>" + item.fecha + "</td><td>" + item.horas + "</td>" +
                     "<td>" + item.estatus + "</td><td>" + item.comentario + "</td></tr>";
                 $("#reporte").append(srtHtml);
             });
+            $("#reporte").append("</tbody>");
+            $("#reporte").kendoGrid();
         });
 }

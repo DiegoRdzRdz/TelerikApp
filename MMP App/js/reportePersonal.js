@@ -45,18 +45,6 @@ function actualizaReporte(form) {
     generaReporte(fechaInicial, fechaFinal);
 }
 
-function reporteEventos() {
-    location = "reporteEventos.html?personId=" + personId + "&fullName=" + fullName;
-}
-
-function reporteHorasViaje() {
-    location = "reporteHorasViaje.html?personId=" + personId + "&fullName=" + fullName;
-}
-
-function reporteEmpleados() {
-    location = "reporteEmpleados.html?personId=" + personId + "&fullName=" + fullName;
-}
-
 function generaReporte(fechaInicial, fechaFinal) {
     var dias;
     var srtHtml;
@@ -82,10 +70,7 @@ function generaReporte(fechaInicial, fechaFinal) {
                 $("#reporte").append(srtHtml);
             });
             $("#reporte").append("</tbody>");
-            $("#reporte").kendoGrid({
-                width: 500,
-                sorteable: true
-            });
+            $("#reporte").kendoGrid();
         });
 }
 

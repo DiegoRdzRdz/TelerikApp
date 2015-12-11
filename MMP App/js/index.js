@@ -29,43 +29,56 @@ var app = {
     }
 
 };
+
 function login(form) {
     var email = form.email.value;
     var pwd = form.pwd.value;
     var userValid;
     var employeeID;
     var fullName;
+    var horas;
+    var fecha = $.getLunes();
+    var lunes = $.formateaFechaNumerico(fecha);
+    fecha.setDate(fecha.getDate() + 6)
+    var domingo = $.formateaFechaNumerico(fecha);
     if (email == '' || pwd == '') {
         alert('Email y password son requeridos');
         return;
     }
-    $.ajax({
-        url: "http://cloud.metalsa.com/BusServiceMetalsa-war/service/autenticar",
-        method: "POST",
-        contentType: "application/json",
-        data: JSON.stringify({
-            usuario: email,
-            password: pwd
-        }),
-        dataType: "json"
-    }).done(function (data) {
-        $.each(data, function (key, val) {
-            if (key == 'userValid') {
-                userValid = val;
+   /* window.location = "home.html?personId=" + "-224" + "&fullName=" + "Sanchez Landa Victor Enrique" + "&horas=" + "00:00";*/
+    
+        $.ajax({
+            url: "http://cloud.metalsa.com/BusServiceMetalsa-war/service/autenticar",
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                usuario: email,
+                password: pwd,
+                fechaInicio: lunes,
+                fechaFin: domingo
+            }),
+            dataType: "json"
+        }).done(function (data) {
+            $.each(data, function (key, val) {
+                if (key == 'userValid') {
+                    userValid = val;
+                }
+                if (key == 'employeeID') {
+                    employeeID = val;
+                }
+                if (key == 'fullName') {
+                    fullName = val;
+                }
+                if (key == 'horas') {
+                    horas = val;
+                }
+            });
+            if (userValid == 'true') {
+                window.location = "home.html?personId=" + employeeID + "&fullName=" + fullName + "&horas=" + horas;
+            } else {
+                alert('Credenciales invalidas');
             }
-            if (key == 'employeeID') {
-                employeeID = val;
-            }
-            if (key == 'fullName') {
-                fullName = val;
-            }
+        }).fail(function (jqXHR, textStatus) {
+            alert("Error en el servidor");
         });
-        if (userValid == 'true') {
-            window.location = "home.html?personId=" + employeeID + "&fullName=" + fullName;
-        } else {
-            alert('Credenciales invalidas');
-        }
-    }).fail(function (jqXHR, textStatus) {
-        alert("Error en el servidor");
-    });
 }
